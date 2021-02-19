@@ -7,22 +7,25 @@
         mc:Ignorable="d"
         Title="Tax calculator" Height="485.333" Width="800">
     <Grid>
-        <Label x:Name="choice_person" Content="Выбор лица" HorizontalAlignment="Left" Margin="45,120,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.514,0.527"/>
-        <ComboBox x:Name="combo_person" HorizontalAlignment="Left" Margin="176,126,0,0" VerticalAlignment="Top" Width="120" Height="22">
+        <Label x:Name="choice_person" Content="Выбор лица" HorizontalAlignment="Left" Margin="17,98,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.514,0.527"/>
+        <ComboBox x:Name="combo_person" HorizontalAlignment="Left" Margin="151,98,0,0" VerticalAlignment="Top" Width="178" Height="28" FontSize="16">
             <ComboBoxItem>Физическое лицо</ComboBoxItem>
             <ComboBoxItem>Юридическое лицо</ComboBoxItem>
         </ComboBox>
-        <Label x:Name="choosingTax" Content="Выбор налога" HorizontalAlignment="Left" Margin="411,117,0,0" VerticalAlignment="Top" FontSize="18"/>
-        <ComboBox x:Name="combo_Tax" HorizontalAlignment="Left" Margin="560,126,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="label4" Content="Журнал расчетов" HorizontalAlignment="Left" Margin="18,170,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="176,170,0,0" VerticalAlignment="Top" Width="504" Height="31"/>
-        <Label x:Name="label" Content="Рубли" HorizontalAlignment="Left" Margin="185,235,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="30" Margin="256,236,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="16"/>
-        <Label x:Name="label1" Content="Коп." HorizontalAlignment="Left" Margin="390,235,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="30" Margin="448,236,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="37" FontSize="16"/>
-        <Label x:Name="label2" Content="Налоговый сбор" HorizontalAlignment="Left" Margin="244,282,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="397,288,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="25" FontSize="16"/>
-        <Label x:Name="label3" Content="Оставшаяся сумма" HorizontalAlignment="Left" Margin="229,334,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="397,339,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="choosingTax" Content="Выбор налога" HorizontalAlignment="Left" Margin="435,95,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="tax_rate" Content="Налоговая ставка" HorizontalAlignment="Left" Margin="240,150,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <ComboBox x:Name="combo_rate" HorizontalAlignment="Left" Margin="400,150,0,0" VerticalAlignment="Top" Width="120" FontSize="16"/>
+        <ComboBox x:Name="combo_Tax" HorizontalAlignment="Left" Margin="570,95,0,0" VerticalAlignment="Top" Width="191" FontSize="16" Height="28"/>
+        <Label x:Name="Journal_log" Content="Журнал расчетов" HorizontalAlignment="Left" Margin="17,202,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <ComboBox x:Name="combo_log" HorizontalAlignment="Left" Margin="184,202,0,0" VerticalAlignment="Top" Width="577" Height="31"/>
+        <Label x:Name="Rub" Content="Рубли" HorizontalAlignment="Left" Margin="198,265,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="t_Rub" HorizontalAlignment="Left" Height="30" Margin="270,265,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="16"/>
+        <Label x:Name="Cop" Content="Копейки" HorizontalAlignment="Left" Margin="405,264,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="t_Cop" HorizontalAlignment="Left" Height="30" Margin="483,264,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="37" FontSize="16"/>
+        <Label x:Name="Tax_fee" Content="Налоговый сбор" HorizontalAlignment="Left" Margin="270,309,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock x:Name="t_Tax_fee" HorizontalAlignment="Left" Margin="419,315,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="25" FontSize="16"/>
+        <Label x:Name="Remaining_sum" Content="Оставшаяся сумма" HorizontalAlignment="Left" Margin="255,353,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock x:Name="t_Remaining_sum" HorizontalAlignment="Left" Margin="419,358,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="16"/>
+        <Button x:Name="Calculation" Content="Расчет" HorizontalAlignment="Left" Margin="361,408,0,0" VerticalAlignment="Top" Width="75" FontSize="16" Click="Calculation_Click"/>
     </Grid>
 </Window>

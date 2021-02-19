@@ -13,3 +13,6 @@ C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\Tax calculator.csp
 C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\Tax calculator.csproj.CoreCompileInputs.cache
 C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\Tax calculator.exe
 C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\Tax calculator.pdb
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\Tax calculator.csproj.CopyComplete
