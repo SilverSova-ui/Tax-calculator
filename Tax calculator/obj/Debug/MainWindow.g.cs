@@ -72,86 +72,6 @@ namespace Tax_calculator {
         #line default
         #line hidden
         
-        
-        #line 17 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label label4;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 18 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.ComboBox comboBox;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 19 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label label;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 20 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBox textBox;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 21 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label label1;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 22 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBox textBox_Copy;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 23 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label label2;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 24 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBlock textBlock;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 25 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label label3;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 26 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBlock textBlock1;
-        
-        #line default
-        #line hidden
-        
         private bool _contentLoaded;
         
         /// <summary>
@@ -193,36 +113,6 @@ namespace Tax_calculator {
             return;
             case 4:
             this.combo_Tax = ((System.Windows.Controls.ComboBox)(target));
-            return;
-            case 5:
-            this.label4 = ((System.Windows.Controls.Label)(target));
-            return;
-            case 6:
-            this.comboBox = ((System.Windows.Controls.ComboBox)(target));
-            return;
-            case 7:
-            this.label = ((System.Windows.Controls.Label)(target));
-            return;
-            case 8:
-            this.textBox = ((System.Windows.Controls.TextBox)(target));
-            return;
-            case 9:
-            this.label1 = ((System.Windows.Controls.Label)(target));
-            return;
-            case 10:
-            this.textBox_Copy = ((System.Windows.Controls.TextBox)(target));
-            return;
-            case 11:
-            this.label2 = ((System.Windows.Controls.Label)(target));
-            return;
-            case 12:
-            this.textBlock = ((System.Windows.Controls.TextBlock)(target));
-            return;
-            case 13:
-            this.label3 = ((System.Windows.Controls.Label)(target));
-            return;
-            case 14:
-            this.textBlock1 = ((System.Windows.Controls.TextBlock)(target));
             return;
             }
             this._contentLoaded = true;

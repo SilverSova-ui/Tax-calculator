@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,6 +24,31 @@ namespace Tax_calculator
         public MainWindow()
         {
             InitializeComponent();
+            Task.Factory.StartNew(() => 
+            {
+                bool tf = false;
+                bool tu = false;
+                while (true) {
+                    Thread.Sleep(1000);
+                    Dispatcher.Invoke(() =>
+                    {
+                        if (combo_person.Text == "Физическое лицо" && tf == false)
+                        {
+                            combo_Tax.Items.Clear();
+                            combo_Tax.Items.Add("Физ");
+                            tf = true;
+                            tu = false;
+                        }
+                        else if (combo_person.Text == "Юридическое лицо" && tu == false)
+                        {
+                            combo_Tax.Items.Clear();
+                            combo_Tax.Items.Add("Юри");
+                            tf = false;
+                            tu = true;
+                        }
+                    });
+                }
+            });
         }
     }
 }

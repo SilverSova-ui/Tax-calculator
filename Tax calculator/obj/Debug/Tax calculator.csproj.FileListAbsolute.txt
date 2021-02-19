@@ -1,0 +1,15 @@
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\bin\Debug\Tax calculator.exe.config
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\bin\Debug\Tax calculator.exe
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\bin\Debug\Tax calculator.pdb
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\Tax calculator.csprojAssemblyReference.cache
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\MainWindow.g.cs
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\App.g.cs
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\Tax calculator_MarkupCompile.cache
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\Tax calculator_MarkupCompile.lref
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\MainWindow.baml
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\Tax calculator.g.resources
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\Tax_calculator.Properties.Resources.resources
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\Tax calculator.csproj.GenerateResource.cache
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\Tax calculator.csproj.CoreCompileInputs.cache
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\Tax calculator.exe
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\Tax calculator.pdb
