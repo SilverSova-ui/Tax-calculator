@@ -9,11 +9,11 @@ namespace Tax_calculator
 {
     class Module
     {
-        public void fillCompletion(string[] listTax,ComboBox combo)
+        public void fillCompletion(Face obj_json, ComboBox combo)
         {
-            for (int i = 0; i<listTax.Length; i++)
+            for (int i = 0; i<obj_json.Tax.Length; i++)
             {
-                combo.Items.Add(listTax[i]);
+                combo.Items.Add(obj_json.Tax[i]);
             }
         }
     }
