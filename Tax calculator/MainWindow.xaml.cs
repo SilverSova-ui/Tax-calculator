@@ -25,11 +25,11 @@ namespace Tax_calculator
         public string Face_Name { get; set; }
         public string[] Tax { get; set; }
     }
-    class Tax_Rate
+    /*class Tax_Rate
     {
         public string Tax_Name { get; set; }
         public string[] Tax_rate { get; set; }
-    }
+    }*/
 
     public partial class MainWindow : Window
     {
@@ -42,7 +42,7 @@ namespace Tax_calculator
             Face[] face = new Face[] {face1, face2 };
             string json = JsonConvert.SerializeObject(face);
             Face[] obj_json = JsonConvert.DeserializeObject<Face[]>(json);
-            string[] NDFL = new string[] {"Test 1", "Test 2"};
+            /*string[] NDFL = new string[] {"9", "13", "30","35"};
             string[] Earth = new string[] { "Test 3", "Test 4" };
             string[] transport = new string[] { "Test 5", "Test 6" };
             string[] property = new string[] { "Test 7", "Test 8" };
@@ -65,7 +65,7 @@ namespace Tax_calculator
                     }
                     t++;
                 }
-            }
+            }*/
             Task.Factory.StartNew(() =>
             {
                 Module completion = new Module();
@@ -73,40 +73,52 @@ namespace Tax_calculator
                 bool tu = false;
                 while (true) {
                     //Thread.Sleep(1000);
-                    Dispatcher.Invoke(() =>
+                    try
                     {
-                        if (combo_person.Text == "Физическое лицо" && tf == false)
+                        Dispatcher.Invoke(() =>
                         {
-                            combo_Tax.Items.Clear();
-                            completion.fillCompletion(obj_json[0], combo_Tax);
-                            tf = true;
-                            tu = false;
-                        }
-                        else if (combo_person.Text == "Юридическое лицо" && tu == false)
-                        {
-                            combo_Tax.Items.Clear();
-                            completion.fillCompletion(obj_json[1], combo_Tax);
-                            tf = false;
-                            tu = true;
-                        }
-                        /*else if ()
-                        {
-
-                        }*/
-                    });
+                            if (combo_person.Text == "Физическое лицо" && tf == false)
+                            {
+                                combo_Tax.Items.Clear();
+                                completion.fillCompletion(obj_json[0], combo_Tax);
+                                tf = true;
+                                tu = false;
+                            }
+                            else if (combo_person.Text == "Юридическое лицо" && tu == false)
+                            {
+                                combo_Tax.Items.Clear();
+                                completion.fillCompletion(obj_json[1], combo_Tax);
+                                tf = false;
+                                tu = true;
+                            }
+                        });
+                    }
+                    catch
+                    {
+                        break;
+                    }
                 }
             });
         }
 
-        private void Calculation_Click(object sender, RoutedEventArgs e)
+        private void Transition_Click(object sender, RoutedEventArgs e)
         {
-            /*Module completion = new Module();
-            string Rub = t_Rub.Text;
-            string Cop = t_Cop.Text;
-            double i = 1000.00;
-            double a = System.Math.Round((double)(i * 13 / 100));
-            t_Tax_fee.Text = a.ToString() + " руб";
-            t_Remaining_sum.Text = (i - a).ToString() + " руб";*/
+            //условие перехода
+            NDFL Transition = new NDFL();
+            Transition.Show();
+            this.Close();
         }
+
+
+        /*NDFL Transition = new NDFL();
+        Transition.Show();
+        this.Close();*/
+        /*Module completion = new Module();
+        string Rub = t_Rub.Text;
+        string Cop = t_Cop.Text;
+        double i = 1000.00;
+        double a = System.Math.Round((double)(i * 13 / 100));
+        t_Tax_fee.Text = a.ToString() + " руб";
+        t_Remaining_sum.Text = (i - a).ToString() + " руб";*/
     }
 }

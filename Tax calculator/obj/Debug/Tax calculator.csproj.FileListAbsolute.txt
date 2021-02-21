@@ -16,3 +16,5 @@ C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\Tax calculator.pdb
 C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\bin\Debug\Newtonsoft.Json.dll
 C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\bin\Debug\Newtonsoft.Json.xml
 C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\Tax calculator.csproj.CopyComplete
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\NDFL.g.cs
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\NDFL.baml

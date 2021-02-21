@@ -1,0 +1,23 @@
+﻿<Window x:Class="Tax_calculator.NDFL"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tax_calculator"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Title="НДФЛ" Height="392" Width="800">
+    <Grid>
+        <Image x:Name="exit" HorizontalAlignment="Left" Height="43" Margin="40,56,0,0" VerticalAlignment="Top" Width="45" Source="Strelka.png" MouseLeftButtonUp="exit_MouseLeftButtonUp"/>
+        <Label x:Name="Sum" Content="Сумма" HorizontalAlignment="Left" Margin="90,120,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="t_Sum" HorizontalAlignment="Left" Height="30" Margin="165,120,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="231" FontSize="16"/>
+        <Label x:Name="tax_rate" Content="Налоговая ставка" HorizontalAlignment="Left" Margin="430,120,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <ComboBox x:Name="combo_rate" HorizontalAlignment="Left" Margin="596,120,0,0" VerticalAlignment="Top" Width="120" FontSize="16"/>
+        <Label x:Name="Tax_fee" Content="Налоговый сбор" HorizontalAlignment="Left" Margin="264,190,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock x:Name="t_Tax_fee" HorizontalAlignment="Left" Margin="419,195,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="31" FontSize="16"/>
+        <Label x:Name="Remaining_sum" Content="Оставшаяся сумма" HorizontalAlignment="Left" Margin="249,226,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock x:Name="t_Remaining_sum" HorizontalAlignment="Left" Margin="419,231,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="16"/>
+        <Button x:Name="Calculation" Content="Расчет" HorizontalAlignment="Left" Margin="370,285,0,0" VerticalAlignment="Top" Width="75" FontSize="16" Click="Calculation_Click"/>
+    </Grid>
+</Window>
