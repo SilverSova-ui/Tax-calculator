@@ -40,7 +40,6 @@ namespace Tax_calculator
             {
                 call.calculationNDFL(t_Sum, combo_rate, t_Tax_fee, t_Remaining_sum);
             }
-
             
         }
 

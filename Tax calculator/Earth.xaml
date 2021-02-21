@@ -1,0 +1,26 @@
+﻿<Window x:Class="Tax_calculator.Earth"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tax_calculator"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Title="Earth" Height="479" Width="765">
+    <Grid>
+        <TextBlock x:Name="title" HorizontalAlignment="Left" Margin="260,38,0,0" TextWrapping="Wrap" Text="Калькулятор земельного налога" VerticalAlignment="Top" FontSize="18"/>
+        <Image x:Name="exit" HorizontalAlignment="Left" Height="43" Margin="37,38,0,0" VerticalAlignment="Top" Width="45" Source="Strelka.png" MouseLeftButtonUp="exit_MouseLeftButtonUp"/>
+        <Label x:Name="cadastral" Content="Кадастровая стоимость" HorizontalAlignment="Left" Margin="143,103,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="t_cadastral" HorizontalAlignment="Left" Height="31" Margin="381,103,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="295" FontSize="16"/>
+        <Label x:Name="Earth_rate" Content="Ставка земельного налога" HorizontalAlignment="Left" Margin="121,158,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <ComboBox x:Name="combo_Earth_rate" HorizontalAlignment="Left" Height="31" Margin="381,158,0,0" Text="" VerticalAlignment="Top" Width="295" FontSize="16"/>
+        <Label x:Name="ndfl" Content="Не облагаемая налогом сумма" HorizontalAlignment="Left" Margin="88,216,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="t_ndfl" HorizontalAlignment="Left" Height="31" Margin="381,216,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="295" FontSize="16"/>
+        <Label x:Name="result" Content="Размер земельного налога" HorizontalAlignment="Left" Margin="117,271,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock x:Name="t_result" HorizontalAlignment="Left" Margin="381,276,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="Remaining_sum" Content="Оставшаяся сумма" HorizontalAlignment="Left" Margin="121,319,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock x:Name="t_Remaining_sum" HorizontalAlignment="Left" Margin="381,329,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="16"/>
+        <Button x:Name="Calculation" Content="Расчет" HorizontalAlignment="Left" Margin="329,385,0,0" VerticalAlignment="Top" Width="75" FontSize="16" Click="Calculation_Click"/>
+    </Grid>
+</Window>

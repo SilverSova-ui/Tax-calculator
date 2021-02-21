@@ -9,6 +9,7 @@
         ResizeMode="NoResize"
         Title="Tax calculator" Height="404.333" Width="800">
     <Grid>
+        <TextBlock x:Name="title" HorizontalAlignment="Left" Margin="317,37,0,0" TextWrapping="Wrap" Text="Калькулятор налогов" VerticalAlignment="Top" FontSize="18"/>
         <Label x:Name="choice_person" Content="Выбор лица" HorizontalAlignment="Left" Margin="17,98,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.514,0.527"/>
         <ComboBox x:Name="combo_person" HorizontalAlignment="Left" Margin="151,98,0,0" VerticalAlignment="Top" Width="178" Height="28" FontSize="16">
             <ComboBoxItem>Физическое лицо</ComboBoxItem>

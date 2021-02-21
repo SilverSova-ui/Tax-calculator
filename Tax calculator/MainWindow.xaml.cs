@@ -104,21 +104,17 @@ namespace Tax_calculator
         private void Transition_Click(object sender, RoutedEventArgs e)
         {
             //условие перехода
-            NDFL Transition = new NDFL();
-            Transition.Show();
-            this.Close();
+            if (combo_person.Text == "Физическое лицо" && combo_Tax.Text == "НДФЛ") {
+                NDFL Transition = new NDFL();
+                Transition.Show();
+                this.Close();
+            }
+            else if(combo_person.Text == "Физическое лицо" && combo_Tax.Text == "Земельный налог")
+            {
+                Earth Transition = new Earth();
+                Transition.Show();
+                this.Close();
+            }
         }
-
-
-        /*NDFL Transition = new NDFL();
-        Transition.Show();
-        this.Close();*/
-        /*Module completion = new Module();
-        string Rub = t_Rub.Text;
-        string Cop = t_Cop.Text;
-        double i = 1000.00;
-        double a = System.Math.Round((double)(i * 13 / 100));
-        t_Tax_fee.Text = a.ToString() + " руб";
-        t_Remaining_sum.Text = (i - a).ToString() + " руб";*/
     }
 }

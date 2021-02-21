@@ -9,6 +9,7 @@
         ResizeMode="NoResize"
         Title="НДФЛ" Height="392" Width="800">
     <Grid>
+        <TextBlock x:Name="title" HorizontalAlignment="Left" Margin="330,37,0,0" TextWrapping="Wrap" Text="Калькулятор НДФЛ" VerticalAlignment="Top" FontSize="18"/>
         <Image x:Name="exit" HorizontalAlignment="Left" Height="43" Margin="40,56,0,0" VerticalAlignment="Top" Width="45" Source="Strelka.png" MouseLeftButtonUp="exit_MouseLeftButtonUp"/>
         <Label x:Name="Sum" Content="Сумма" HorizontalAlignment="Left" Margin="90,120,0,0" VerticalAlignment="Top" FontSize="16"/>
         <TextBox x:Name="t_Sum" HorizontalAlignment="Left" Height="30" Margin="165,120,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="231" FontSize="16"/>

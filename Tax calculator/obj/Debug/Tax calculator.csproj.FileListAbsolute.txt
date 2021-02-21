@@ -18,3 +18,5 @@ C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\bin\Debug\Newtonsoft.Json.xm
 C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\Tax calculator.csproj.CopyComplete
 C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\NDFL.g.cs
 C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\NDFL.baml
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\Earth.g.cs
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\Earth.baml
