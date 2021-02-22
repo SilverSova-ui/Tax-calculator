@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
-        Title="НДФЛ" Height="392" Width="800">
+        Title="Калькулятор НДФЛ" Height="392" Width="800">
     <Grid>
         <TextBlock x:Name="title" HorizontalAlignment="Left" Margin="330,37,0,0" TextWrapping="Wrap" Text="Калькулятор НДФЛ" VerticalAlignment="Top" FontSize="18"/>
         <Image x:Name="exit" HorizontalAlignment="Left" Height="43" Margin="40,56,0,0" VerticalAlignment="Top" Width="45" Source="Strelka.png" MouseLeftButtonUp="exit_MouseLeftButtonUp"/>

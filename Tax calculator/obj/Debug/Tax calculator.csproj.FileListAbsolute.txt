@@ -20,3 +20,5 @@ C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\NDFL.g.cs
 C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\NDFL.baml
 C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\Earth.g.cs
 C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\Earth.baml
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\Transport_Tax.g.cs
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\Transport_Tax.baml

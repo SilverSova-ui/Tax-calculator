@@ -20,7 +20,7 @@ namespace Tax_calculator
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public class Face
+    class Face
     {
         public string Face_Name { get; set; }
         public string[] Tax { get; set; }
@@ -112,6 +112,12 @@ namespace Tax_calculator
             else if(combo_person.Text == "Физическое лицо" && combo_Tax.Text == "Земельный налог")
             {
                 Earth Transition = new Earth();
+                Transition.Show();
+                this.Close();
+            }
+            else if (combo_person.Text == "Физическое лицо" && combo_Tax.Text == "Транспортный налог")
+            {
+                Transport_Tax Transition = new Transport_Tax();
                 Transition.Show();
                 this.Close();
             }
