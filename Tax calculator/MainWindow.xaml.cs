@@ -37,7 +37,7 @@ namespace Tax_calculator
         {
             //json и сократить код
             InitializeComponent();
-            Face face1 = new Face() { Face_Name = "Физическое лицо", Tax = new string[] {"НДФЛ", "Земельный налог", "Транспортный налог", "Налог на имущество" }};
+            Face face1 = new Face() { Face_Name = "Физическое лицо", Tax = new string[] {"НДФЛ", "Земельный налог", "Транспортный налог"}};
             Face face2 = new Face() { Face_Name = "Юридическо лицо", Tax = new string[] { "Налог на прибыль", "Налог на имущество предприятий", "НДС" } };
             Face[] face = new Face[] {face1, face2 };
             string json = JsonConvert.SerializeObject(face);

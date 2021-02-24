@@ -7,33 +7,34 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
-        Title="Калькулятор транспортного налога" Height="513" Width="800">
+        Title="Калькулятор транспортного налога" Height="540" Width="800">
     <Grid>
         <TextBlock x:Name="title" HorizontalAlignment="Left" Margin="260,38,0,0" TextWrapping="Wrap" Text="Калькулятор транспортного налога" VerticalAlignment="Top" FontSize="18"/>
         <Image x:Name="exit" HorizontalAlignment="Left" Height="43" Margin="37,38,0,0" VerticalAlignment="Top" Width="45" Source="Strelka.png" MouseLeftButtonUp="exit_MouseLeftButtonUp"/>
-        <Label x:Name="Region" Content="Регион" HorizontalAlignment="Left" Margin="181,118,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <ComboBox x:Name="combo_Region" HorizontalAlignment="Left" Margin="289,118,0,0" VerticalAlignment="Top" Width="291" Height="31">
+        <Label x:Name="sum" Content="Сумма" HorizontalAlignment="Left" Margin="184,113,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="t_sum" HorizontalAlignment="Left" Height="33" Margin="289,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="291" FontSize="16"/>
+        <Label x:Name="Region" Content="Регион" HorizontalAlignment="Left" Margin="181,159,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <ComboBox x:Name="combo_Region" HorizontalAlignment="Left" Margin="289,159,0,0" VerticalAlignment="Top" Width="291" Height="31">
             <ComboBoxItem>Москва</ComboBoxItem>
             <ComboBoxItem>Тульская область</ComboBoxItem>
             <ComboBoxItem>Санкт-Петербург</ComboBoxItem>
             <ComboBoxItem>Крым</ComboBoxItem>
         </ComboBox>
-        <Label x:Name="Term_of_ownership" Content="Срок владения, мес." HorizontalAlignment="Left" Margin="84,170,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <ComboBox x:Name="combo_Term_of_ownership" HorizontalAlignment="Left" Margin="289,170,0,0" VerticalAlignment="Top" Width="291" Height="31"/>
-        <Label x:Name="Power" Content="Мощность в л.с." HorizontalAlignment="Left" Margin="114,216,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <ComboBox x:Name="combo_Power" HorizontalAlignment="Left" Height="31" Margin="289,216,0,0" Text="" VerticalAlignment="Top" Width="291" FontSize="16">
-            <ComboBoxItem>0-100 л.с.</ComboBoxItem>
-            <ComboBoxItem>100-150 л.с.</ComboBoxItem>
-            <ComboBoxItem>150-200 л.с.</ComboBoxItem>
-            <ComboBoxItem>200-250 л.с.</ComboBoxItem>
-            <ComboBoxItem>251 более л.с.</ComboBoxItem>
+        <Label x:Name="Term_of_ownership" Content="Срок владения, мес." HorizontalAlignment="Left" Margin="84,206,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <ComboBox x:Name="combo_Term_of_ownership" HorizontalAlignment="Left" Margin="289,206,0,0" VerticalAlignment="Top" Width="291" Height="31"/>
+        <Label x:Name="Power" Content="Мощность в л.с." HorizontalAlignment="Left" Margin="114,251,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="t_Power" HorizontalAlignment="Left" Height="31" Margin="289,251,0,0" Text="" VerticalAlignment="Top" Width="291" FontSize="16"/>
+        <Label x:Name="Price" Content="Цена автомобиля, руб." HorizontalAlignment="Left" Margin="64,298,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <ComboBox x:Name="combo_Price" HorizontalAlignment="Left" Height="31" Margin="289,298,0,0" Text="" VerticalAlignment="Top" Width="291" FontSize="16">
+            <ComboBoxItem>От 3000000 до 5000000 руб.</ComboBoxItem>
+            <ComboBoxItem>От 5000000 до 10000000 руб.</ComboBoxItem>
+            <ComboBoxItem>От 10000000 до 15000000 руб.</ComboBoxItem>
+            <ComboBoxItem>Более 15000000 руб.</ComboBoxItem>
         </ComboBox>
-        <Label x:Name="Price" Content="Цена автомобиля, руб." HorizontalAlignment="Left" Margin="64,262,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <TextBox x:Name="t_Price" HorizontalAlignment="Left" Height="31" Margin="289,262,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="291" FontSize="16"/>
-        <Label x:Name="result" Content="Размер транспортного налога" HorizontalAlignment="Left" Margin="11,319,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <TextBlock x:Name="t_result" HorizontalAlignment="Left" Margin="289,324,0,0" TextWrapping="Wrap" Text="y" VerticalAlignment="Top" FontSize="16"/>
-        <Label x:Name="Remaining_sum" Content="Оставшаяся сумма" HorizontalAlignment="Left" Margin="95,370,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <TextBlock x:Name="t_Remaining_sum" HorizontalAlignment="Left" Margin="289,375,0,0" TextWrapping="Wrap" Text="y" VerticalAlignment="Top" FontSize="16"/>
-        <Button x:Name="Calculation" Content="Расчет" HorizontalAlignment="Left" Margin="355,431,0,0" VerticalAlignment="Top" Width="75" FontSize="16" Click="Calculation_Click"/>
+        <Label x:Name="result" Content="Размер транспортного налога" HorizontalAlignment="Left" Margin="11,349,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock x:Name="t_result" HorizontalAlignment="Left" Margin="289,354,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="Remaining_sum" Content="Оставшаяся сумма" HorizontalAlignment="Left" Margin="95,398,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock x:Name="t_Remaining_sum" HorizontalAlignment="Left" Margin="289,403,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="16"/>
+        <Button x:Name="Calculation" Content="Расчет" HorizontalAlignment="Left" Margin="354,449,0,0" VerticalAlignment="Top" Width="75" FontSize="16" Click="Calculation_Click"/>
     </Grid>
 </Window>
