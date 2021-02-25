@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace Tax_calculator
@@ -102,6 +104,27 @@ namespace Tax_calculator
                             }
                         }
                     }
+                }
+            }
+        }
+        public void calculationIncome(Regex regex,TextBox t_work,TextBlock t_Tax,int D, int P, int CT)
+        {
+            if (t_work.Text == string.Empty)
+            {
+                var result = System.Math.Round((double)((D - P) * CT / 100));
+                t_Tax.Text = result.ToString() + " руб.";
+            }
+            else
+            {
+                if (!regex.IsMatch(t_work.Text))
+                {
+                    MessageBox.Show("Ошибка, введите сумму", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else
+                {
+                    int W = Convert.ToInt32(t_work.Text);
+                    var result = System.Math.Round((double)((D - W - P) * CT / 100));
+                    t_Tax.Text = result.ToString() + " руб.";
                 }
             }
         }

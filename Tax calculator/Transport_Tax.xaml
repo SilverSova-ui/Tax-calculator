@@ -26,6 +26,7 @@
         <TextBox x:Name="t_Power" HorizontalAlignment="Left" Height="31" Margin="289,251,0,0" Text="" VerticalAlignment="Top" Width="291" FontSize="16"/>
         <Label x:Name="Price" Content="Цена автомобиля, руб." HorizontalAlignment="Left" Margin="64,298,0,0" VerticalAlignment="Top" FontSize="16"/>
         <ComboBox x:Name="combo_Price" HorizontalAlignment="Left" Height="31" Margin="289,298,0,0" Text="" VerticalAlignment="Top" Width="291" FontSize="16">
+            <ComboBoxItem>Нет</ComboBoxItem>
             <ComboBoxItem>От 3000000 до 5000000 руб.</ComboBoxItem>
             <ComboBoxItem>От 5000000 до 10000000 руб.</ComboBoxItem>
             <ComboBoxItem>От 10000000 до 15000000 руб.</ComboBoxItem>

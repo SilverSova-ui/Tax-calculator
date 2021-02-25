@@ -33,6 +33,7 @@ namespace Tax_calculator
 
     public partial class MainWindow : Window
     {
+        bool task = true;
         public MainWindow()
         {
             //json и сократить код
@@ -71,7 +72,7 @@ namespace Tax_calculator
                 Module completion = new Module();
                 bool tf = false;
                 bool tu = false;
-                while (true) {
+                while (task == true) {
                     //Thread.Sleep(1000);
                     try
                     {
@@ -95,6 +96,7 @@ namespace Tax_calculator
                     }
                     catch
                     {
+                        task = false;
                         break;
                     }
                 }
@@ -102,22 +104,32 @@ namespace Tax_calculator
         }
 
         private void Transition_Click(object sender, RoutedEventArgs e)
-        {
+        {  
             //условие перехода
             if (combo_person.Text == "Физическое лицо" && combo_Tax.Text == "НДФЛ") {
+                task = false;
                 NDFL Transition = new NDFL();
                 Transition.Show();
                 this.Close();
             }
             else if(combo_person.Text == "Физическое лицо" && combo_Tax.Text == "Земельный налог")
             {
+                task = false;
                 Earth Transition = new Earth();
                 Transition.Show();
                 this.Close();
             }
             else if (combo_person.Text == "Физическое лицо" && combo_Tax.Text == "Транспортный налог")
             {
+                task = false;
                 Transport_Tax Transition = new Transport_Tax();
+                Transition.Show();
+                this.Close();
+            }
+            else if (combo_person.Text == "Юридическое лицо" && combo_Tax.Text == "Налог на прибыль")
+            {
+                task = false;
+                IncomeTax Transition = new IncomeTax();
                 Transition.Show();
                 this.Close();
             }
