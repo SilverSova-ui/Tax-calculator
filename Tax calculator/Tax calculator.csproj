@@ -61,6 +61,9 @@
     <Compile Include="IncomeTax.xaml.cs">
       <DependentUpon>IncomeTax.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NDS.xaml.cs">
+      <DependentUpon>NDS.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Transport_Tax.xaml.cs">
       <DependentUpon>Transport_Tax.xaml</DependentUpon>
     </Compile>
@@ -88,6 +91,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="NDFL.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NDS.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

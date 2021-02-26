@@ -24,3 +24,5 @@ C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\Transport_Tax.g.cs
 C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\Transport_Tax.baml
 C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\IncomeTax.g.cs
 C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\IncomeTax.baml
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\NDS.g.cs
+C:\Users\ПК\Desktop\Tax-calculator\Tax calculator\obj\Debug\NDS.baml

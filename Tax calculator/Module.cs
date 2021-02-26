@@ -128,5 +128,26 @@ namespace Tax_calculator
                 }
             }
         }
+        public void calculationNDS(ComboBox combo_choice, Label sum, TextBlock t_sum, int p, int r, Label NDS_result, TextBlock t_NDS_result)
+        {
+            if (combo_choice.Text == combo_choice.Items[0].ToString().Replace("System.Windows.Controls.ComboBoxItem:", "").Trim())
+            {
+                var result = System.Math.Round((double)p * r / (r + 100));
+                sum.Content = "НДС из цены " + p.ToString() + " руб.";
+                t_sum.Text = result.ToString() + " руб.";
+                NDS_result.Content = "";
+                t_NDS_result.Text = "";
+            }
+            else if (combo_choice.Text == combo_choice.Items[1].ToString().Replace("System.Windows.Controls.ComboBoxItem:", "").Trim())
+            {
+                var result = System.Math.Round((double)p * (r + 100) / 100);
+                Console.WriteLine(result);
+                sum.Content = "Начисление НДС к цене " + p.ToString() + " руб.";
+                t_sum.Text = result.ToString() + " руб.";
+                NDS_result.Content = "цена НДС ";
+                result = result - p;
+                t_NDS_result.Text = result.ToString() + " руб.";
+            }
+        }
     }
 }

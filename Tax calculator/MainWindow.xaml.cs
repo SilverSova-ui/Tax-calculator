@@ -39,7 +39,7 @@ namespace Tax_calculator
             //json и сократить код
             InitializeComponent();
             Face face1 = new Face() { Face_Name = "Физическое лицо", Tax = new string[] {"НДФЛ", "Земельный налог", "Транспортный налог"}};
-            Face face2 = new Face() { Face_Name = "Юридическо лицо", Tax = new string[] { "Налог на прибыль", "Налог на имущество предприятий", "НДС" } };
+            Face face2 = new Face() { Face_Name = "Юридическо лицо", Tax = new string[] { "Налог на прибыль", "НДС" } };
             Face[] face = new Face[] {face1, face2 };
             string json = JsonConvert.SerializeObject(face);
             Face[] obj_json = JsonConvert.DeserializeObject<Face[]>(json);
@@ -130,6 +130,13 @@ namespace Tax_calculator
             {
                 task = false;
                 IncomeTax Transition = new IncomeTax();
+                Transition.Show();
+                this.Close();
+            }
+            else if (combo_person.Text == "Юридическое лицо" && combo_Tax.Text == "НДС")
+            {
+                task = false;
+                NDS Transition = new NDS();
                 Transition.Show();
                 this.Close();
             }
