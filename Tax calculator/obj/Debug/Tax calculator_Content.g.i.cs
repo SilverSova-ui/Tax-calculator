@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("strelka.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("tax_icon.ico")]
 
 

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
-        Title="Калькулятор налога на прибыль" Height="436" Width="692">
+        Title="Калькулятор налога на прибыль" Height="436" Width="692" Icon="Tax_Icon.png">
     <Grid>
         <TextBlock x:Name="title" HorizontalAlignment="Left" Margin="199,27,0,0" TextWrapping="Wrap" Text="Калькулятор налога на прибыль" VerticalAlignment="Top" FontSize="18"/>
         <Image x:Name="exit" HorizontalAlignment="Left" Height="43" Margin="37,38,0,0" VerticalAlignment="Top" Width="45" Source="Strelka.png" MouseLeftButtonUp="exit_MouseLeftButtonUp"/>

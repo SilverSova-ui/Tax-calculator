@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
-        Title="Калькулятор налогов" Height="404.333" Width="800">
+        Title="Калькулятор налогов" Height="404.333" Width="800" Icon="Tax_Icon.png">
     <Grid>
         <TextBlock x:Name="title" HorizontalAlignment="Left" Margin="317,37,0,0" TextWrapping="Wrap" Text="Калькулятор налогов" VerticalAlignment="Top" FontSize="18"/>
         <Label x:Name="choice_person" Content="Выбор лица" HorizontalAlignment="Left" Margin="17,98,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.514,0.527"/>
@@ -18,7 +18,9 @@
         <Label x:Name="choosingTax" Content="Выбор налога" HorizontalAlignment="Left" Margin="435,95,0,0" VerticalAlignment="Top" FontSize="16"/>
         <ComboBox x:Name="combo_Tax" HorizontalAlignment="Left" Margin="570,95,0,0" VerticalAlignment="Top" Width="191" FontSize="16" Height="28"/>
         <Label x:Name="Journal_log" Content="Журнал расчетов" HorizontalAlignment="Left" Margin="17,174,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <ComboBox x:Name="combo_log" HorizontalAlignment="Left" Margin="184,174,0,0" VerticalAlignment="Top" Width="577" Height="31" FontSize="16"/>
+        <ComboBox x:Name="combo_log" HorizontalAlignment="Left" Margin="184,174,0,0" VerticalAlignment="Top" Width="462" Height="31" FontSize="16"/>
+        <Button x:Name="discharge" Content="Выгрузка журнала" HorizontalAlignment="Left" Margin="660,159,0,0" VerticalAlignment="Top" Width="113" Click="discharge_Click"/>
+        <Button x:Name="clearing" Content="Очищение" HorizontalAlignment="Left" Margin="660,190,0,0" VerticalAlignment="Top" Width="113" Click="clearing_Click"/>
         <Button x:Name="Transition" Content="Перейти к калькулятору" HorizontalAlignment="Left" Margin="301,275,0,0" VerticalAlignment="Top" Width="193" FontSize="16" Height="33" Click="Transition_Click"/>
     </Grid>
 </Window>

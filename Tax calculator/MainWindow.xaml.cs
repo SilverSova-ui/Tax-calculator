@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -13,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 using Newtonsoft.Json;
 
 namespace Tax_calculator
@@ -41,11 +43,12 @@ namespace Tax_calculator
         public MainWindow()
         {
             InitializeComponent();
+
             Module call = new Module();
             call.reset_JSON(combo_log);
-            Face face1 = new Face() { Face_Name = "Физическое лицо", Tax = new string[] {"НДФЛ", "Земельный налог", "Транспортный налог"}};
+            Face face1 = new Face() { Face_Name = "Физическое лицо", Tax = new string[] { "НДФЛ", "Земельный налог", "Транспортный налог" } };
             Face face2 = new Face() { Face_Name = "Юридическо лицо", Tax = new string[] { "Налог на прибыль", "НДС" } };
-            Face[] face = new Face[] {face1, face2 };
+            Face[] face = new Face[] { face1, face2 };
             string json = JsonConvert.SerializeObject(face);
             Face[] obj_json = JsonConvert.DeserializeObject<Face[]>(json);
             Task.Factory.StartNew(() =>
@@ -53,8 +56,8 @@ namespace Tax_calculator
                 Module completion = new Module();
                 bool tf = false;
                 bool tu = false;
-                while (task == true) {
-                    //Thread.Sleep(1000);
+                while (task == true)
+                {
                     try
                     {
                         Dispatcher.Invoke(() =>
@@ -89,13 +92,14 @@ namespace Tax_calculator
         private void Transition_Click(object sender, RoutedEventArgs e)
         {
 
-            if (combo_person.Text == "Физическое лицо" && combo_Tax.Text == "НДФЛ") {
+            if (combo_person.Text == "Физическое лицо" && combo_Tax.Text == "НДФЛ")
+            {
                 task = false;
                 NDFL Transition = new NDFL();
                 Transition.Show();
                 this.Close();
             }
-            else if(combo_person.Text == "Физическое лицо" && combo_Tax.Text == "Земельный налог")
+            else if (combo_person.Text == "Физическое лицо" && combo_Tax.Text == "Земельный налог")
             {
                 task = false;
                 Earth Transition = new Earth();
@@ -122,6 +126,44 @@ namespace Tax_calculator
                 NDS Transition = new NDS();
                 Transition.Show();
                 this.Close();
+            }
+        }
+
+        private void discharge_Click(object sender, RoutedEventArgs e)
+        {
+            string[] log = new string[] { };
+            for (int i = 0; i < combo_log.Items.Count; i++)
+            {
+                Array.Resize(ref log, log.Length + 1);
+                log[log.Length - 1] = combo_log.Items[i].ToString().Replace("System.Windows.Controls.ComboBoxItem:", "").Trim();
+            }
+
+            SaveFileDialog dlg = new SaveFileDialog();
+            dlg.Filter = "Text file(*.txt)|*.txt";
+
+            if (dlg.ShowDialog()==true)
+            {
+                for(int i = 0; i<log.Length; i++){
+                    string text = log[i];
+                    using (FileStream fs = new FileStream(@"" + dlg.FileName, FileMode.Append))
+                    {
+                        byte[] byte_array = System.Text.Encoding.Default.GetBytes(text + "\n");
+                        fs.Write(byte_array, 0, byte_array.Length);
+                    }
+                }
+            }
+        }
+
+        private void clearing_Click(object sender, RoutedEventArgs e)
+        {
+            var result = MessageBox.Show("ВНИМАНИЕ! Хотите очистить журнал?", "Внимание!", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (result == MessageBoxResult.Yes) {
+                File.WriteAllText(@".\json\Journal.json", "");
+                combo_log.Items.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Произошла отмена!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
     }
