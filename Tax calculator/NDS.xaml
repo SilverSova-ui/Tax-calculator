@@ -11,13 +11,14 @@
     <Grid>
         <TextBlock x:Name="title" HorizontalAlignment="Left" Margin="332,34,0,0" TextWrapping="Wrap" Text="Калькулятор НДС" VerticalAlignment="Top" FontSize="18"/>
         <Image x:Name="exit" HorizontalAlignment="Left" Height="43" Margin="37,53,0,0" VerticalAlignment="Top" Width="45" Source="Strelka.png" MouseLeftButtonUp="exit_MouseLeftButtonUp"/>
-        <Label x:Name="price" Content="Цена" HorizontalAlignment="Left" Margin="101,113,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <TextBox x:Name="t_price" HorizontalAlignment="Left" Height="31" Margin="201,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="322" FontSize="16"/>
-        <ComboBox x:Name="combo_choice" HorizontalAlignment="Left" Margin="569,113,0,0" VerticalAlignment="Top" Width="152" Height="31">
+        <Label x:Name="price" Content="Цена" HorizontalAlignment="Left" Margin="85,113,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="t_price" HorizontalAlignment="Left" Height="31" Margin="154,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="322" FontSize="16"/>
+        <Label x:Name="choice" Content="Выбор НДС" HorizontalAlignment="Left" Margin="499,113,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <ComboBox x:Name="combo_choice" HorizontalAlignment="Left" Margin="610,113,0,0" VerticalAlignment="Top" Width="152" Height="31">
             <ComboBoxItem FontSize="16">Выделить НДС</ComboBoxItem>
             <ComboBoxItem FontSize="16">Начислить НДС</ComboBoxItem>
         </ComboBox>
-        <Label x:Name="rate" Content="Ставка НДС" HorizontalAlignment="Left" Margin="101,170,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label x:Name="rate" Content="Ставка НДС" HorizontalAlignment="Left" Margin="85,170,0,0" VerticalAlignment="Top" FontSize="16"/>
         <ComboBox x:Name="combo_rate" HorizontalAlignment="Left" Margin="234,170,0,0" VerticalAlignment="Top" Width="170" Height="31">
             <ComboBoxItem FontSize="16">10%</ComboBoxItem>
             <ComboBoxItem FontSize="16">18%</ComboBoxItem>
@@ -28,5 +29,6 @@
         <Label x:Name="NDS_result" Content="" HorizontalAlignment="Left" Margin="101,327,0,0" VerticalAlignment="Top" FontSize="16"/>
         <TextBlock x:Name="t_NDS_result" HorizontalAlignment="Left" Margin="523,332,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="16"/>
         <Button x:Name="Calculation" Content="Расчет" HorizontalAlignment="Left" Margin="368,390,0,0" VerticalAlignment="Top" Width="75" FontSize="16" Click="Calculation_Click"/>
+        
     </Grid>
 </Window>

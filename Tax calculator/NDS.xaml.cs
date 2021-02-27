@@ -27,7 +27,9 @@ namespace Tax_calculator
 
         private void exit_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-
+            MainWindow Transition = new MainWindow();
+            Transition.Show();
+            this.Close();
         }
 
         private void Calculation_Click(object sender, RoutedEventArgs e)
@@ -41,7 +43,17 @@ namespace Tax_calculator
                 int p = Convert.ToInt32(t_price.Text);
                 int r = Convert.ToInt32(combo_rate.Text.Trim('%'));
                 Module call = new Module();
-                call.calculationNDS(combo_choice, sum, t_sum, p, r,NDS_result,t_NDS_result);                
+                call.calculationNDS(combo_choice, sum, t_sum, p, r,NDS_result,t_NDS_result);
+                List<Tuple<string, string>> jouranl = new List<Tuple<string, string>>();
+                jouranl.Add(new Tuple<string, string>(price.Content.ToString(), t_price.Text));
+                jouranl.Add(new Tuple<string, string>(choice.Content.ToString(), combo_choice.Text));
+                jouranl.Add(new Tuple<string, string>(rate.Content.ToString(), combo_rate.Text));
+                jouranl.Add(new Tuple<string, string>(sum.Content.ToString(), t_sum.Text));
+                if (combo_choice.Text == combo_choice.Items[1].ToString().Replace("System.Windows.Controls.ComboBoxItem:", "").Trim())
+                {
+                    jouranl.Add(new Tuple<string, string>(NDS_result.Content.ToString(), t_NDS_result.Text));
+                }
+                call.recording_JSON(title, jouranl);
             }
         }
     }

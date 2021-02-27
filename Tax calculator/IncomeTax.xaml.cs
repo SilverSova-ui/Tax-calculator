@@ -46,6 +46,13 @@ namespace Tax_calculator
                 int P = Convert.ToInt32(t_sum_Expenses.Text);
                 Module call = new Module();
                 call.calculationIncome(regex,t_work,t_Tax,D,P,CT);
+                List<Tuple<string, string>> jouranl = new List<Tuple<string, string>>();
+                jouranl.Add(new Tuple<string, string>(rate_Tax.Content.ToString(), t_rate_Tax.Text));
+                jouranl.Add(new Tuple<string, string>(sum_Expenses.Content.ToString(), t_sum_Expenses.Text));
+                jouranl.Add(new Tuple<string, string>(sum_Revenue.Content.ToString(), t_sum_Revenue.Text));
+                jouranl.Add(new Tuple<string, string>(work.Content.ToString(), t_work.Text));
+                jouranl.Add(new Tuple<string, string>(Tax.Content.ToString(), t_Tax.Text));
+                call.recording_JSON(title, jouranl);
             }
         }
     }

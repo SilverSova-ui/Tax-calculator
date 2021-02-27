@@ -1,16 +1,59 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Text.Json;
 
 namespace Tax_calculator
 {
     class Module
     {
+        public async Task recording_JSON(TextBlock title, List<Tuple<string, string>> jouranl)
+        {
+            Directory.CreateDirectory(@".\json");
+            using (FileStream fs = new FileStream(@".\json\Journal.json", FileMode.Append))
+            {
+                Journal new_journal = new Journal() { Calculation_Name = title.Text, Meaning = jouranl, DataTime = DateTime.Now.ToString() };
+                await System.Text.Json.JsonSerializer.SerializeAsync<Journal>(fs, new_journal);
+            }
+        }
+
+        public async Task reset_JSON(ComboBox combo_log)
+        {
+            List<Journal> journal = new List<Journal>();
+            JsonTextReader reader = new JsonTextReader(new StreamReader(@".\json\Journal.json"));
+            reader.SupportMultipleContent = true;
+            while (true)
+            {
+                if (!reader.Read())
+                {
+                    break;
+                }
+                else
+                {
+                    Newtonsoft.Json.JsonSerializer serializer = new Newtonsoft.Json.JsonSerializer();
+                    Journal obj = serializer.Deserialize<Journal>(reader);
+                    journal.Add(obj);
+                    string j = "";
+                    for (int i = 0; i < journal.Count; i++)
+                    {
+                        for (int q = 0; q < journal[i].Meaning.Count; q++)
+                        {
+                            j += journal[i].Meaning[q].Item1 + " " + journal[i].Meaning[q].Item2 + "\n";
+                        }
+                        combo_log.Items.Add(journal[i].Calculation_Name + ":\n" + j + "Дата и время расчетов " + journal[i].DataTime);
+                        j = "";
+                    }
+                }
+            }
+        }
+
         public void fillCompletion(Face obj_json, ComboBox combo)
         {
             for (int i = 0; i < obj_json.Tax.Length; i++)

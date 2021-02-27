@@ -38,7 +38,6 @@ namespace Tax_calculator
             {
                 Array.Resize(ref region_list, region_list.Length + 1);
                 region_list[region_list.Length - 1] = combo_Region.Items[i].ToString().Replace("System.Windows.Controls.ComboBoxItem:", "").Trim();
-                Console.WriteLine(region_list[i]);
             }
             for(int i = 0; i<12; i++)
             {
@@ -71,6 +70,15 @@ namespace Tax_calculator
                 Table_Region[] obj_json = JsonConvert.DeserializeObject<Table_Region[]>(json);
                 Module call = new Module();
                 call.calculationTransport(obj_json,t_Power,combo_Term_of_ownership,combo_Region,t_sum,combo_Price,t_result,t_Remaining_sum);
+                List<Tuple<string, string>> jouranl = new List<Tuple<string, string>>();
+                jouranl.Add(new Tuple<string, string>(sum.Content.ToString(), t_sum.Text));
+                jouranl.Add(new Tuple<string, string>(Region.Content.ToString(), combo_Region.Text));
+                jouranl.Add(new Tuple<string, string>(Term_of_ownership.Content.ToString(), combo_Term_of_ownership.Text));
+                jouranl.Add(new Tuple<string, string>(Power.Content.ToString(), t_Power.Text));
+                jouranl.Add(new Tuple<string, string>(Price.Content.ToString(), combo_Price.Text));
+                jouranl.Add(new Tuple<string, string>(result.Content.ToString(), t_result.Text));
+                jouranl.Add(new Tuple<string, string>(Remaining_sum.Content.ToString(), t_Remaining_sum.Text));
+                call.recording_JSON(title, jouranl);
             }
         }
     }

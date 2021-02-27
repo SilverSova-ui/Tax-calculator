@@ -25,48 +25,29 @@ namespace Tax_calculator
         public string Face_Name { get; set; }
         public string[] Tax { get; set; }
     }
-    /*class Tax_Rate
+    public class Journal
     {
-        public string Tax_Name { get; set; }
-        public string[] Tax_rate { get; set; }
-    }*/
+        public string Calculation_Name { get; set; }
+        public List<Tuple<string, string>> Meaning { get; set; }
+
+        public string DataTime { get; set; }
+    }
+
+
 
     public partial class MainWindow : Window
     {
         bool task = true;
         public MainWindow()
         {
-            //json и сократить код
             InitializeComponent();
+            Module call = new Module();
+            call.reset_JSON(combo_log);
             Face face1 = new Face() { Face_Name = "Физическое лицо", Tax = new string[] {"НДФЛ", "Земельный налог", "Транспортный налог"}};
             Face face2 = new Face() { Face_Name = "Юридическо лицо", Tax = new string[] { "Налог на прибыль", "НДС" } };
             Face[] face = new Face[] {face1, face2 };
             string json = JsonConvert.SerializeObject(face);
             Face[] obj_json = JsonConvert.DeserializeObject<Face[]>(json);
-            /*string[] NDFL = new string[] {"9", "13", "30","35"};
-            string[] Earth = new string[] { "Test 3", "Test 4" };
-            string[] transport = new string[] { "Test 5", "Test 6" };
-            string[] property = new string[] { "Test 7", "Test 8" };
-            string[] profit = new string[] { "Test 9", "Test 10" };
-            string[] property_enterprise = new string[] { "Test 11", "Test 12" };
-            string[] NDS = new string[] { "Test 13", "Test 14" };
-            string[][] bid = new string[][] { NDFL, Earth, transport, property, profit, property_enterprise, NDS};
-            int t = 0;
-            for(int i = 0; i< obj_json.Length; i++){
-                for (int q = 0; q < obj_json[i].Tax.Length; q++)
-                {
-                    Tax_Rate Rate = new Tax_Rate();
-                    Rate.Tax_Name = obj_json[i].Tax[q];
-                    Rate.Tax_rate = bid[t];
-                    string json2 = JsonConvert.SerializeObject(Rate);
-                    Tax_Rate obj_json2 = JsonConvert.DeserializeObject<Tax_Rate>(json2);
-                    for (int o = 0; o < obj_json2.Tax_rate.Length; o++)
-                    {
-                        Console.WriteLine(obj_json2.Tax_Name + " " + obj_json2.Tax_rate[o]);
-                    }
-                    t++;
-                }
-            }*/
             Task.Factory.StartNew(() =>
             {
                 Module completion = new Module();
@@ -103,9 +84,11 @@ namespace Tax_calculator
             });
         }
 
+
+
         private void Transition_Click(object sender, RoutedEventArgs e)
-        {  
-            //условие перехода
+        {
+
             if (combo_person.Text == "Физическое лицо" && combo_Tax.Text == "НДФЛ") {
                 task = false;
                 NDFL Transition = new NDFL();

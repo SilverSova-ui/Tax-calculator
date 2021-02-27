@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -39,8 +40,14 @@ namespace Tax_calculator
             else
             {
                 call.calculationNDFL(t_Sum, combo_rate, t_Tax_fee, t_Remaining_sum);
+                List<Tuple<string,string>> jouranl = new List<Tuple<string, string>>();
+                jouranl.Add(new Tuple<string, string>(Sum.Content.ToString(), t_Sum.Text));
+                jouranl.Add(new Tuple<string, string>(tax_rate.Content.ToString(), combo_rate.Text));
+                jouranl.Add(new Tuple<string, string>(Tax_fee.Content.ToString(), t_Tax_fee.Text));
+                jouranl.Add(new Tuple<string, string>(Remaining_sum.Content.ToString(), t_Remaining_sum.Text));
+                call.recording_JSON(title,jouranl);
             }
-            
+
         }
 
         private void exit_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
