@@ -16,8 +16,8 @@ namespace Tax_calculator
     {
         public async Task recording_JSON(TextBlock title, List<Tuple<string, string>> jouranl)
         {
-            Directory.CreateDirectory(@".\json");
-            using (FileStream fs = new FileStream(@".\json\Journal.json", FileMode.Append))
+            Directory.CreateDirectory($@".\json");
+            using (FileStream fs = new FileStream($@".\json\Journal.json", FileMode.Append))
             {
                 Journal new_journal = new Journal() { Calculation_Name = title.Text, Meaning = jouranl, DataTime = DateTime.Now.ToString() };
                 await System.Text.Json.JsonSerializer.SerializeAsync<Journal>(fs, new_journal);
@@ -45,9 +45,9 @@ namespace Tax_calculator
                     {
                         for (int q = 0; q < journal[i].Meaning.Count; q++)
                         {
-                            j += journal[i].Meaning[q].Item1 + " " + journal[i].Meaning[q].Item2 + "\n";
+                            j += journal[i].Meaning[q].Item1 + " " + journal[i].Meaning[q].Item2 + "\r\n";
                         }
-                        combo_log.Items.Add(journal[i].Calculation_Name + ":\n" + j + "Дата и время расчетов " + journal[i].DataTime);
+                        combo_log.Items.Add(journal[i].Calculation_Name + ":\r\n" + j + "Дата и время расчетов " + journal[i].DataTime);
                         j = "";
                     }
                 }

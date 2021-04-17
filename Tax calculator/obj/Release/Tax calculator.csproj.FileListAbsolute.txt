@@ -1,0 +1,46 @@
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\bin\Release\Tax calculator.exe.config
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\bin\Release\Tax calculator.exe
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\bin\Release\Tax calculator.pdb
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\bin\Release\Newtonsoft.Json.dll
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\bin\Release\System.Buffers.dll
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\bin\Release\System.Memory.dll
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\bin\Release\System.Numerics.Vectors.dll
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\bin\Release\System.Text.Encodings.Web.dll
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\bin\Release\System.Text.Json.dll
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\bin\Release\System.Threading.Tasks.Extensions.dll
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\bin\Release\System.ValueTuple.dll
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\bin\Release\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\bin\Release\Newtonsoft.Json.xml
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\bin\Release\System.Buffers.xml
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\bin\Release\System.Memory.xml
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\bin\Release\System.Numerics.Vectors.xml
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\bin\Release\System.Text.Encodings.Web.xml
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\bin\Release\System.Text.Json.xml
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\bin\Release\System.Threading.Tasks.Extensions.xml
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\bin\Release\System.ValueTuple.xml
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\obj\Release\Tax calculator.csprojAssemblyReference.cache
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\obj\Release\Earth.g.cs
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\obj\Release\IncomeTax.g.cs
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\obj\Release\MainWindow.g.cs
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\obj\Release\NDFL.g.cs
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\obj\Release\NDS.g.cs
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\obj\Release\Transport_Tax.g.cs
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\obj\Release\App.g.cs
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\obj\Release\Tax calculator_MarkupCompile.cache
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\obj\Release\Tax calculator_MarkupCompile.lref
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\obj\Release\Earth.baml
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\obj\Release\IncomeTax.baml
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\obj\Release\MainWindow.baml
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\obj\Release\NDFL.baml
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\obj\Release\NDS.baml
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\obj\Release\Transport_Tax.baml
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\obj\Release\Tax calculator.g.resources
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\obj\Release\Tax_calculator.Properties.Resources.resources
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\obj\Release\Tax calculator.csproj.GenerateResource.cache
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\obj\Release\Tax calculator.csproj.CoreCompileInputs.cache
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\obj\Release\Tax calculator.csproj.CopyComplete
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\obj\Release\Tax calculator.exe
+C:\Users\mackk\Desktop\Tax-2\Tax-calculator\Tax calculator\obj\Release\Tax calculator.pdb

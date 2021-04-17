@@ -127,43 +127,77 @@ namespace Tax_calculator
                 Transition.Show();
                 this.Close();
             }
+            else if(combo_person.Text == "" || combo_Tax.Text == "")
+            {
+                MessageBox.Show("Ошибка, поля не выбраны", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void discharge_Click(object sender, RoutedEventArgs e)
         {
-            string[] log = new string[] { };
-            for (int i = 0; i < combo_log.Items.Count; i++)
+            try
             {
-                Array.Resize(ref log, log.Length + 1);
-                log[log.Length - 1] = combo_log.Items[i].ToString().Replace("System.Windows.Controls.ComboBoxItem:", "").Trim();
-            }
+                string[] log = new string[] { };
+                for (int i = 0; i < combo_log.Items.Count; i++)
+                {
+                    Array.Resize(ref log, log.Length + 1);
+                    log[log.Length - 1] = combo_log.Items[i].ToString().Replace("System.Windows.Controls.ComboBoxItem:", "").Trim();
+                }
 
-            SaveFileDialog dlg = new SaveFileDialog();
-            dlg.Filter = "Text file(*.txt)|*.txt";
+                SaveFileDialog dlg = new SaveFileDialog();
+                dlg.Filter = "Text file(*.txt)|*.txt";
 
-            if (dlg.ShowDialog()==true)
-            {
-                for(int i = 0; i<log.Length; i++){
-                    string text = log[i];
-                    using (FileStream fs = new FileStream(@"" + dlg.FileName, FileMode.Append))
+                if (dlg.ShowDialog() == true)
+                {
+                    for (int i = 0; i < log.Length; i++)
                     {
-                        byte[] byte_array = System.Text.Encoding.Default.GetBytes(text + "\n");
-                        fs.Write(byte_array, 0, byte_array.Length);
+                        
+                        string text = null;
+                        if (i == 0)
+                        {
+                            text = log[i];
+                        }
+                        else if (log[i].Split(' ')[0] == "Калькулятор")
+                        {
+                            text = "\r\n \r\n" + log[i];
+                        }
+                        else
+                        {
+                            text = log[i];
+                        }
+                        Console.WriteLine(text);
+                        using (FileStream fs = new FileStream(@"" + dlg.FileName, FileMode.Append))
+                        {
+                            byte[] byte_array = System.Text.Encoding.Default.GetBytes(text);
+                            fs.Write(byte_array, 0, byte_array.Length);
+                        }
                     }
                 }
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка, файл Journal.json не найден!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
         private void clearing_Click(object sender, RoutedEventArgs e)
         {
-            var result = MessageBox.Show("ВНИМАНИЕ! Хотите очистить журнал?", "Внимание!", MessageBoxButton.YesNo, MessageBoxImage.Warning);
-            if (result == MessageBoxResult.Yes) {
-                File.WriteAllText(@".\json\Journal.json", "");
-                combo_log.Items.Clear();
-            }
-            else
+            try
             {
-                MessageBox.Show("Произошла отмена!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                var result = MessageBox.Show("ВНИМАНИЕ! Хотите очистить журнал?", "Внимание!", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                if (result == MessageBoxResult.Yes)
+                {
+                    File.WriteAllText(@".\json\Journal.json", "");
+                    combo_log.Items.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Произошла отмена!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка, файл Journal.json не найден!", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

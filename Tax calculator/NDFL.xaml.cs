@@ -32,20 +32,27 @@ namespace Tax_calculator
 
         private void Calculation_Click(object sender, RoutedEventArgs e)
         {
-            Regex regex = new Regex(@"^[0-9]+$");
-            if (!regex.IsMatch(t_Sum.Text) || combo_rate.Text == string.Empty)
+            try
             {
-                MessageBox.Show("Ошибка, введите сумму", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Error);
+                Regex regex = new Regex(@"^[0-9]+$");
+                if (!regex.IsMatch(t_Sum.Text) || combo_rate.Text == string.Empty)
+                {
+                    MessageBox.Show("Ошибка, введите сумму", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else
+                {
+                    call.calculationNDFL(t_Sum, combo_rate, t_Tax_fee, t_Remaining_sum);
+                    List<Tuple<string, string>> jouranl = new List<Tuple<string, string>>();
+                    jouranl.Add(new Tuple<string, string>(Sum.Content.ToString(), t_Sum.Text));
+                    jouranl.Add(new Tuple<string, string>(tax_rate.Content.ToString(), combo_rate.Text));
+                    jouranl.Add(new Tuple<string, string>(Tax_fee.Content.ToString(), t_Tax_fee.Text));
+                    jouranl.Add(new Tuple<string, string>(Remaining_sum.Content.ToString(), t_Remaining_sum.Text));
+                    call.recording_JSON(title, jouranl);
+                }
             }
-            else
+            catch
             {
-                call.calculationNDFL(t_Sum, combo_rate, t_Tax_fee, t_Remaining_sum);
-                List<Tuple<string,string>> jouranl = new List<Tuple<string, string>>();
-                jouranl.Add(new Tuple<string, string>(Sum.Content.ToString(), t_Sum.Text));
-                jouranl.Add(new Tuple<string, string>(tax_rate.Content.ToString(), combo_rate.Text));
-                jouranl.Add(new Tuple<string, string>(Tax_fee.Content.ToString(), t_Tax_fee.Text));
-                jouranl.Add(new Tuple<string, string>(Remaining_sum.Content.ToString(), t_Remaining_sum.Text));
-                call.recording_JSON(title,jouranl);
+                MessageBox.Show("Ошибка, формата ввода", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
         }
