@@ -51,6 +51,7 @@ namespace Tax_calculator
                         j = "";
                     }
                 }
+                journal.Clear();
             }
         }
 
